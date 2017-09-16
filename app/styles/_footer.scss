@@ -1,0 +1,170 @@
+.footer{
+	background-color: #2A2A2A;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 95px 0 65px 0; 
+	@media (max-width: $screen-xs-max){
+		padding-top: 20px;
+		padding: 30px 0 30px 0; 
+	}
+	&__logo{
+		padding-bottom: 40px;
+			@media (max-width: $screen-xs-max){
+				text-align: center;
+				padding-bottom: 20px;
+			}
+		a{
+			text-transform: uppercase;
+			font-size: 20px;
+			font-family: 'SegoeUI';
+			font-weight: 400;
+			color: #858889;
+			text-decoration: none;
+		}
+	}
+	&__copyright{
+		@media (max-width: $screen-xs-max){
+			text-align: center;
+		}
+		p{
+			font-size: 15px;
+			font-family: 'SegoeUI';
+			font-weight: 400;
+			color: #95989A;
+			@media (max-width: $screen-xs-max){
+				font-size: 12px;
+				margin: 0;
+				br{
+					display: none;
+				}
+			}
+		}
+	}
+	&__nav{
+		text-align: left;
+		@media (max-width: $screen-sm-max){
+			text-align: center;
+		}
+		@media (max-width: $screen-xs-max){
+			padding-top: 15px;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				list-style-type: none;
+				line-height: 23px;
+				a{
+					font-size: 15px;
+					font-family: 'SegoeUI';
+					font-weight: 400;
+					color: #C5C5C5;
+				}
+			}
+		}
+	}
+	&__form{
+		float: right;
+		margin: 0 auto;
+		max-width: 300px;
+		@media (max-width: $screen-sm-max){
+			float: none;
+		}	
+		@media (max-width: $screen-xs-max){
+			padding-top: 20px;
+			text-align: center;
+		}
+		p{
+			font-size: 15px;
+			font-family: 'SegoeUI';
+			font-weight: 400;
+			color: #C5C5C5;
+		}
+		::-webkit-input-placeholder {
+			color: #7C7C7C;
+			font-size: 13px;
+			font-weight: 400;
+			font-family: 'SegoeUI';
+			font-size: 12px;
+		}
+		::-moz-placeholder{
+			font-size: 13px;
+			color: #7C7C7C;
+			font-weight: 400;
+			font-family: 'SegoeUI';
+			font-size: 12px;
+		}
+		:-moz-placeholder {
+			font-size: 13px;
+			color: #7C7C7C;
+			font-weight: 400;
+			font-family: 'SegoeUI';
+			font-size: 12px;
+		}
+		:-ms-input-placeholder {
+			font-size: 13px;
+			color: #7C7C7C;
+			font-weight: 400;
+			font-family: 'SegoeUI';
+			font-size: 12px;
+		}
+		input[type="text"]{
+			min-height: 34px;
+			max-width: 200px;
+			width: 100%;
+			border-radius: 6px;
+			background-color: #404040;
+			border: none;
+			padding-left: 15px;
+			outline: none;
+			color: #C5C5C5;
+			position: absolute;		
+			@media (max-width: $screen-sm-max){
+				max-width: 150px;
+			}	
+			@media (max-width: $screen-xs-max){
+				padding-left: 12px;
+			}
+		}
+		button{
+			position: relative;
+			border-radius: 6px;
+			background-color: #5B64FF;
+			max-width: 60px;
+			width: 100%;
+			min-height: 34px;
+			text-transform: uppercase;
+			color: #E2DADA;
+			font-size: 13px;
+			font-weight: 400;
+			font-family: 'SegoeUI';
+			border: none;
+			outline: none;
+			display: inline-block;	
+			margin-left: 140px;	
+			@media (max-width: $screen-sm-max){
+				margin-left: 120px;
+			}				
+		}
+	}
+	&__address{
+		float: right;
+		font-size: 15px;
+		font-weight: 400;
+		font-family: 'SegoeUI';
+		color: #95989A;
+		max-width: 170px;
+		width: 100%;
+		@media (max-width: $screen-sm-max){
+			float: none;
+		}
+		@media (max-width: $screen-xs-max){
+			padding-top: 20px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}

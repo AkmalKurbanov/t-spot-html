@@ -1,0 +1,320 @@
+.questions{
+	padding-top: 40px;
+	&__questions-answers{
+		box-shadow: 5px 20px 99px rgba(0,0,0,0.16);
+		padding: 30px 0 30px 80px;
+		margin-bottom: 40px;
+		@media screen and (max-width: 1200px){
+			padding: 30px 0 30px 40px;
+		}
+		@media (max-width: $screen-md-max){
+			padding: 30px 15px 30px 15px;
+		}
+		@media (max-width: $screen-xs-max){
+			padding-bottom: 20px;
+			padding-top: 10px;
+			margin-bottom: 20px;
+		}
+		.caption-wrap{
+			padding-bottom: 40px;	
+			@media (max-width: $screen-xs-max){
+				padding-bottom: 15px;	
+			}
+			.caption{
+				font-size: 42px;
+				@media (max-width: $screen-xs-max){
+					font-size: 22px;
+				}
+			}
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				font-family: 'GothamPro';
+				font-weight: 400;
+				color: #4B4B4B; 
+				list-style-type: none; 
+				line-height: 48px;
+				@media (max-width: $screen-md-max){
+					line-height: 35px;					
+				}
+				@media (max-width: $screen-xs-max){
+					line-height: 30px;					
+				}
+			}
+		}
+	}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+	border-top: 1px solid transparent;	
+}
+.panel-collapse{
+	border-bottom: 1px solid #C3C6C8;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	@media (max-width: $screen-xs-max){
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+&__acardeon{
+	max-width: 1050px;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 5px 20px 99px rgba(0,0,0,0.16);
+	margin-top: 40px;
+	padding-top: 70px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	margin-bottom: 80px;
+	background-color: #fff;
+	@media screen and (max-width: 1200px){
+		padding: 30px 0 30px 40px;
+		margin-bottom: 60px;
+	}
+	@media (max-width: $screen-md-max){
+		padding: 30px 15px 30px 15px;
+		margin-bottom: 50px;
+	}
+	@media (max-width: $screen-xs-max){
+		padding-bottom: 20px;
+		padding-top: 30px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	.title__headline{
+		margin-bottom: 25px;
+			@media (max-width: $screen-xs-max){
+				margin-bottom: 15px;				
+			}
+		h2{
+			margin: 0;
+			font-size: 21px;
+			font-family: 'GothamPro';
+			font-weight: 400;
+			@media (max-width: $screen-xs-max){
+				font-size: 18px;
+			}
+		}
+	}
+		.-hide_blog{
+			display: none;
+		}
+
+
+
+	a {
+		border: none;
+		&:focus, &:hover, &:active {
+				outline: 0;
+				text-decoration: none;
+				background-color: transparent;
+				color: #95989A !important;
+			}
+		}
+
+		.panel {
+			border-width: 0 0 2px 0;
+			border-style: solid;
+			border-color: transparent;
+			background: none;
+			box-shadow: none;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.panel-group {
+			> .panel:first-child .panel-heading {
+				border-radius: 0;
+			}
+			.panel {
+				border-radius: 0;
+				+ .panel {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.panel-heading {
+			background-color: #fff;
+			border-radius: 0;
+			border: none;
+			color: #fff;
+			padding: 0;
+			&.active a{
+				background-color: transparent !important;
+				color: #95989A !important;
+			}
+		}		
+
+		.panel-title a {
+			display: block;
+			color: #000;
+			padding: 8px 15px;
+			position: relative;
+			font-size: 16px;
+			font-weight: 400;
+			&:hover{
+				color: #fff;
+			}
+		}
+
+		.panel-body {
+			background: #fff;
+				@media (max-width: $screen-xs-max){
+					padding-left: 0;
+					padding-right: 0;
+				}
+			ul{
+				margin: 0;	
+				padding: 0;
+				li{
+					list-style-type: none;
+					font-size: 18px;
+					font-family: 'GothamPro';
+					font-weight: 300;
+					color: #7E7E7E;
+						@media (max-width: $screen-xs-max){
+							font-size: 16px;
+						}
+				}
+			}
+		}
+
+
+		.panel:last-child {
+			.panel-body {
+				border-radius: 0;
+			}
+			.panel-heading {
+				border-radius: 0;
+				transition: border-radius 0.3s linear 0.2s;
+				&.active {
+					border-radius: 0;
+					transition: border-radius linear 0s;
+				}
+			}
+		}
+
+		.panel-heading {
+			a:before {
+				content: '\f107';
+				position: absolute;
+				font-family: 'FontAwesome';
+				right: 15px;
+				top: 5px;
+				font-size: 24px;
+				color: #ddd;
+				transition: all 0.5s;
+				transform: scale(1);
+			}
+			&.active a:before {
+				content: ' ';
+				color: #95989A;
+				transition: all 0.5s;
+				transform: scale(0);
+			}
+		}
+
+		#bs-collapse .panel-heading {
+			a:after {
+				content: ' ';
+				font-size: 24px;
+				position: absolute;
+				font-family: 'Material Icons';
+				right: 5px;
+				top: 10px;
+				transform: scale(0);
+				transition: all 0.5s;
+			}
+			&.active a:after {
+				content: '\e909';
+				transform: scale(1);
+				transition: all 0.5s;
+			}
+		}
+
+
+		#accordion .panel-heading {
+			a:before {
+				content: '\f106';
+				font-size: 24px;
+				position: absolute;
+				font-family: 'FontAwesome';
+				right: 15px;
+				top: 5px;
+				transform: rotate(180deg);
+				transition: all 0.5s;
+			}
+			&.active a:before {
+				transform: rotate(0deg);
+				transition: all 0.5s;
+			}
+		}
+		&--acardeon{
+			margin-bottom: 40px;
+		}
+	}
+
+	&__form{
+		label{
+			font-size: 15px;
+			font-family: 'GothamPro';
+			font-weight: 300;
+			padding-top: 15px;
+			@media (max-width: $screen-xs-max){
+				padding-top: 5px;
+			}
+		}
+		input{
+			display: block;
+			width: 100%;
+			background-color: #F9F9F9;
+			outline: none;
+			border: none;
+			min-height: 43px;
+			padding-left: 15px;
+			font-weight: 300;
+			font-family: 'GothamPro';
+		}
+		textarea{
+			display: block;
+			width: 100%;
+			height: 210px;
+			background-color: #F9F9F9;
+			outline: none;
+			border: none;
+			padding-left: 15px;
+			font-weight: 300;
+			font-family: 'GothamPro';
+			padding-top: 10px;
+		}
+		.button-wrap{
+			float: right;
+			padding-top: 10px;
+			@media (max-width: $screen-sm-max){
+				float: none;
+				text-align: center;
+			}
+			button{
+				background-color: #878CFE;
+				font-size: 17px;
+				font-family: 'GothamPro';
+				font-weight: 400;
+				color: #fff;
+				border: none;
+				border-radius: 0.7rem;
+				min-height: 51px;
+				margin-top: 5px;
+				width: 320px;
+				max-width: 100%;
+				outline: none;
+				@media (max-width: $screen-xs-max){
+					font-size: 13px;
+				}
+			}
+		}
+	}	
+}
