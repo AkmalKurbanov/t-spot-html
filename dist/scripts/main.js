@@ -1,1 +1,146 @@
-"use strict";$(function(){var e=$(".main-slider-js");e.owlCarousel({items:1,loop:!0,margin:10,autoplay:!0,autoplayTimeout:5e3,autoplayHoverPause:!0,mouseDrag:!1}),$(".play").on("click",function(){e.trigger("play.owl.autoplay",[5e3])}),$(".stop").on("click",function(){e.trigger("stop.owl.autoplay")}),$(".js-btn").on("click",function(e){e.preventDefault(),$(".-hide_blog").slideToggle(),$(this).hide()}),$(".collapse.in").prev(".panel-heading").addClass("active"),$("#accordion, #bs-collapse").on("show.bs.collapse",function(e){$(e.target).prev(".panel-heading").addClass("active")}).on("hide.bs.collapse",function(e){$(e.target).prev(".panel-heading").removeClass("active")}),$(".group_radio_goods").each(function(e,a){$(this).children(".group_radio").addClass("cat"+e)}),$(".header__nav ul").clone().appendTo(".mmenu-nav");var a=$(".mmenu-nav").mmenu({navbar:{title:"Меню"},extensions:["fx-menu-slide","fx-listitems-slide","border-full","pagedim-black"],offCanvas:{position:"right"},counters:!0}),o=$(".js-navtrigger"),n=a.data("mmenu");if(o.on("click",function(){n.open()}),n.bind("open:start",function(e){$(".js-navtrigger").toggleClass("-active")}),n.bind("close:start",function(e){$(".js-navtrigger").toggleClass("-active")}),Modernizr.mq("(max-width: 767px)")){var t=function(e){if($("#map").html(""),l=new ymaps.Map("map",{controls:["zoomControl","fullscreenControl","geolocationControl"],center:[55.646685,37.649148],behaviors:["drag"],zoom:17}),!e.type)return i=new ymaps.Placemark([55.646685,37.649148],{balloonContentHeader:"",balloonContentBody:""}),l.geoObjects.add(i),!0};$('a.-pagescroll[href*="#"]:not([href="#"])').click(function(){if(n.close(),location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=$(this.hash);if(e=e.length?e:$("[name="+this.hash.slice(1)+"]"),e.length)return $("html, body").animate({scrollTop:e.offset().top},1e3),!0}});var l,i;ymaps.ready(t)}else{var s=function(e){if($("#map").html(""),l=new ymaps.Map("map",{controls:["zoomControl","fullscreenControl","geolocationControl"],center:[55.646685,37.649148],behaviors:["drag"],zoom:17}),!e.type)return i=new ymaps.Placemark([55.646685,37.649148],{balloonContentHeader:"",balloonContentBody:""}),l.geoObjects.add(i),!0};$('a.-pagescroll[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=$(this.hash);if(e=e.length?e:$("[name="+this.hash.slice(1)+"]"),e.length)return $("html, body").animate({scrollTop:e.offset().top},1e3),!0}});var l,i;ymaps.ready(s)}});
+'use strict';
+
+$(function () {
+
+  var owl = $('.main-slider-js');
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    mouseDrag: false
+  });
+  $('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [5000]);
+  });
+  $('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay');
+  });
+
+  $('.js-btn').on('click', function (event) {
+    event.preventDefault();
+    $('.-hide_blog').slideToggle();
+    $(this).hide();
+  });
+
+  $('.collapse.in').prev('.panel-heading').addClass('active');
+  $('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
+    $(a.target).prev('.panel-heading').addClass('active');
+  }).on('hide.bs.collapse', function (a) {
+    $(a.target).prev('.panel-heading').removeClass('active');
+  });
+
+  $('.group_radio_goods').each(function (index, el) {
+    $(this).children('.group_radio').addClass('cat' + index);
+    console.log('cat' + index);
+  });
+
+  $('.header__nav ul').clone().appendTo('.mmenu-nav');
+
+  var $menu = $('.mmenu-nav').mmenu({
+    navbar: {
+      title: 'Меню'
+    },
+    extensions: ['fx-menu-slide', 'fx-listitems-slide', 'border-full', 'pagedim-black'],
+    offCanvas: {
+      'position': 'right'
+    },
+    counters: true
+  });
+
+  var $icon = $('.js-navtrigger');
+  var API = $menu.data('mmenu');
+
+  $icon.on('click', function () {
+    API.open();
+  });
+
+  API.bind('open:start', function ($panel) {
+    $('.js-navtrigger').toggleClass('-active');
+  });
+
+  API.bind('close:start', function ($panel) {
+    $('.js-navtrigger').toggleClass('-active');
+  });
+
+  if (Modernizr.mq('(max-width: 767px)')) {
+    var init = function init(data) {
+      $('#map').html('');
+      myMap = new ymaps.Map('map', {
+        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl'],
+        center: [55.646685, 37.649148],
+        behaviors: ['drag'],
+        zoom: 17
+      });
+
+      if (!data.type) {
+        myPlacemark = new ymaps.Placemark([55.646685, 37.649148], {
+          balloonContentHeader: '',
+          balloonContentBody: ''
+
+        });
+        myMap.geoObjects.add(myPlacemark);
+        return true;
+      };
+    };
+
+    $('a.-pagescroll[href*="#"]:not([href="#"])').click(function () {
+      API.close();
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return true;
+        }
+      }
+    });
+
+    var myMap, myPlacemark;
+
+    ymaps.ready(init);
+
+    ;
+  } else {
+    var _init = function _init(data) {
+      $('#map').html('');
+      myMap = new ymaps.Map('map', {
+        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl'],
+        center: [55.646685, 37.649148],
+        behaviors: ['drag'],
+        zoom: 17
+      });
+
+      if (!data.type) {
+        myPlacemark = new ymaps.Placemark([55.646685, 37.649148], {
+          balloonContentHeader: '',
+          balloonContentBody: ''
+        });
+        myMap.geoObjects.add(myPlacemark);
+        return true;
+      };
+    };
+
+    $('a.-pagescroll[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return true;
+        }
+      }
+    });
+    var myMap, myPlacemark;
+
+    ymaps.ready(_init);
+
+    ;
+  }
+});

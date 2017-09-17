@@ -2,6 +2,8 @@ $(function() {
 
 
 
+
+
 var owl = $('.main-slider-js');
 owl.owlCarousel({
     items:1,
@@ -43,14 +45,6 @@ $('.js-btn').on('click', function(event) {
 
 
   });
-
-
-
-
-
-
-
-
 
 
   $('.header__nav ul').clone().appendTo('.mmenu-nav');
@@ -101,6 +95,7 @@ $('.js-btn').on('click', function(event) {
         }
       }
     });
+
     var myMap, myPlacemark;
 
     ymaps.ready(init);
@@ -160,6 +155,21 @@ $('.js-btn').on('click', function(event) {
       };
     };
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
