@@ -12481,6 +12481,24 @@ button.close {
   text-decoration: none;
 }
 
+.carousel__news-block:hover .carousel__img-wrap {
+  position: relative;
+}
+
+.carousel__news-block:hover .carousel__img-wrap:before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel__news-block:hover .carousel__img-bottom p {
+  color: #A3ABD5;
+}
+
 .carousel__news-block img {
   width: 100%;
   max-width: 100%;
@@ -13344,4 +13362,61 @@ button.close {
   .specialist__desc p {
     font-size: 15px;
   }
+}
+
+.new {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+}
+
+.new__content {
+  box-shadow: 5px 20px 99px rgba(130, 127, 127, 0.16);
+  padding: 60px 70px;
+}
+
+.new__content h2 {
+  font-size: 18px;
+  font-family: 'GothamPro';
+  font-weight: 400;
+  margin-left: 15px;
+  color: #4B4B4B;
+}
+
+.new__content p {
+  font-size: 17px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  line-height: 44px;
+  color: #4B4B4B;
+}
+
+.new__content p a {
+  text-decoration: none;
+  color: #4B4B4B;
+  transition: all .3s;
+}
+
+.new__content p a:hover {
+  text-decoration: underline;
+  color: #A3ABD5;
+}
+
+.new__button-back {
+  margin-top: 40px;
+  background-color: #A3ABD5;
+  float: right;
+  font-size: 14px;
+  font-family: 'GothamPro';
+  font-weight: 400;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 9px 55px;
+  transition: all .3s;
+}
+
+.new__button-back:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #9398CC;
 }
