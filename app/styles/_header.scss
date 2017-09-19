@@ -41,7 +41,8 @@
 		@media (max-width: $screen-sm-max){
 			padding-top: 0px;			
 		}
-		p{
+		a{
+			text-decoration: none;
 			color: $main-color;
 			font-size: 19px;
 			padding: 0;
@@ -49,6 +50,11 @@
 			text-align: right;
 			position: relative;
 			display: inline-block;
+			transition: all .3s;
+			&:hover{
+				color: #878CFE;
+			}
+
 			&:before{
 				position: absolute;
 				content: "\f10b";

@@ -70,13 +70,13 @@ $(function () {
       $('#map').html('');
       myMap = new ymaps.Map('map', {
         controls: ['zoomControl', 'fullscreenControl', 'geolocationControl'],
-        center: [55.646685, 37.649148],
+        center: [],
         behaviors: ['drag'],
         zoom: 17
       });
 
       if (!data.type) {
-        myPlacemark = new ymaps.Placemark([55.646685, 37.649148], {
+        myPlacemark = new ymaps.Placemark([], {
           balloonContentHeader: '',
           balloonContentBody: ''
 
@@ -110,13 +110,13 @@ $(function () {
       $('#map').html('');
       myMap = new ymaps.Map('map', {
         controls: ['zoomControl', 'fullscreenControl', 'geolocationControl'],
-        center: [55.646685, 37.649148],
+        center: [],
         behaviors: ['drag'],
         zoom: 17
       });
 
       if (!data.type) {
-        myPlacemark = new ymaps.Placemark([55.646685, 37.649148], {
+        myPlacemark = new ymaps.Placemark([], {
           balloonContentHeader: '',
           balloonContentBody: ''
         });

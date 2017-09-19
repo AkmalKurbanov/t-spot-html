@@ -42,25 +42,15 @@
 		position: relative;
 		min-height: 350px;
 		text-align: left;
-		padding-top: 90px;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
 		@media (max-width: $screen-xs-max){
 			padding-top: 20px;  
 			width: 100%;
 		}
-		#map {
-    	position: absolute;
-    	top: 0;
-    	right: 0;
-    	left: 0;
-    	bottom: 0;
-    	@media (max-width: $screen-md-max){
-			left: 8px;
-			}
-    	@media (max-width: $screen-xs-max){
-    		position: relative;  
-    		left: 0;
-    	}
-    }
+		
   }
   &__desc{
   	position: relative;
@@ -75,13 +65,20 @@
   		padding-right: 0;
   		text-align: center;
   	}
-  	h2{
+  	.first-link{
+      display: block;
+      color: #000;
   		margin: 0;
   		font-size: 28px;
   		font-family: 'GothamPro';
   		font-weight: 400;
   		position: relative;
   		margin-bottom: 80px;
+      transition: all .3s;
+      &:hover{
+        text-decoration: none;
+        color: #503623;
+      }
   		@media (max-width: $screen-md-max){
   			margin-top: 30px;
   			margin-bottom: 30px;
@@ -123,7 +120,7 @@
   			font-size: 20px;
   		}
   	}
-  	a{
+  	.link{
   		font-size: 12px;
   		font-family: 'GothamPro';
   		font-weight: 400;

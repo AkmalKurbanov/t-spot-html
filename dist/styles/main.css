@@ -11047,7 +11047,8 @@ button.close {
   }
 }
 
-.header__phone p {
+.header__phone a {
+  text-decoration: none;
   color: #A3ABD5;
   font-size: 19px;
   padding: 0;
@@ -11055,9 +11056,14 @@ button.close {
   text-align: right;
   position: relative;
   display: inline-block;
+  transition: all .3s;
 }
 
-.header__phone p:before {
+.header__phone a:hover {
+  color: #878CFE;
+}
+
+.header__phone a:before {
   position: absolute;
   content: "\f10b";
   font-family: 'FontAwesome';
@@ -11065,7 +11071,7 @@ button.close {
 }
 
 @media (max-width: 991px) {
-  .header__phone p {
+  .header__phone a {
     text-align: center;
     font-size: 25px;
   }
@@ -11771,6 +11777,9 @@ button.close {
 .news__news-block {
   margin-top: 50px;
   display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
 }
 
 @media (max-width: 767px) {
@@ -12186,6 +12195,7 @@ button.close {
   padding-left: 15px;
   font-weight: 300;
   font-family: 'GothamPro';
+  border: 1px solid #ddd;
 }
 
 .questions__form textarea {
@@ -12199,6 +12209,7 @@ button.close {
   font-weight: 300;
   font-family: 'GothamPro';
   padding-top: 10px;
+  border: 1px solid #ddd;
 }
 
 .questions__form .button-wrap {
@@ -12642,34 +12653,17 @@ button.close {
   position: relative;
   min-height: 350px;
   text-align: left;
-  padding-top: 90px;
+}
+
+.contacts__map img {
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 767px) {
   .contacts__map {
     padding-top: 20px;
     width: 100%;
-  }
-}
-
-.contacts__map #map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-@media (max-width: 1199px) {
-  .contacts__map #map {
-    left: 8px;
-  }
-}
-
-@media (max-width: 767px) {
-  .contacts__map #map {
-    position: relative;
-    left: 0;
   }
 }
 
@@ -12694,31 +12688,39 @@ button.close {
   }
 }
 
-.contacts__desc h2 {
+.contacts__desc .first-link {
+  display: block;
+  color: #000;
   margin: 0;
   font-size: 28px;
   font-family: 'GothamPro';
   font-weight: 400;
   position: relative;
   margin-bottom: 80px;
+  transition: all .3s;
+}
+
+.contacts__desc .first-link:hover {
+  text-decoration: none;
+  color: #503623;
 }
 
 @media (max-width: 1199px) {
-  .contacts__desc h2 {
+  .contacts__desc .first-link {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 767px) {
-  .contacts__desc h2 {
+  .contacts__desc .first-link {
     margin-bottom: 30px;
     margin-top: 20px;
     font-size: 25px;
   }
 }
 
-.contacts__desc h2:after {
+.contacts__desc .first-link:after {
   position: absolute;
   content: '';
   right: 0;
@@ -12730,7 +12732,7 @@ button.close {
 }
 
 @media (max-width: 1199px) {
-  .contacts__desc h2:after {
+  .contacts__desc .first-link:after {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -12738,7 +12740,7 @@ button.close {
 }
 
 @media (max-width: 767px) {
-  .contacts__desc h2:after {
+  .contacts__desc .first-link:after {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -12765,7 +12767,7 @@ button.close {
   }
 }
 
-.contacts__desc a {
+.contacts__desc .link {
   font-size: 12px;
   font-family: 'GothamPro';
   font-weight: 400;
@@ -12776,7 +12778,7 @@ button.close {
 }
 
 @media (max-width: 1199px) {
-  .contacts__desc a {
+  .contacts__desc .link {
     float: none;
     padding-bottom: 30px;
     padding-right: 20px;
@@ -12784,7 +12786,7 @@ button.close {
 }
 
 @media (max-width: 767px) {
-  .contacts__desc a {
+  .contacts__desc .link {
     padding-bottom: 20px;
   }
 }
@@ -13185,6 +13187,42 @@ button.close {
   .test__address {
     padding-right: 10px;
     padding-left: 10px;
+  }
+}
+
+.test__address h3 {
+  margin: 0;
+  padding-bottom: 5px;
+  color: #000;
+  display: block;
+  font-size: 16px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+@media (max-width: 767px) {
+  .test__address h3 {
+    font-size: 15px;
+  }
+}
+
+.test__address p {
+  margin: 0;
+  padding-bottom: 5px;
+  color: #000;
+  display: block;
+  font-size: 16px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+@media (max-width: 767px) {
+  .test__address p {
+    font-size: 15px;
   }
 }
 

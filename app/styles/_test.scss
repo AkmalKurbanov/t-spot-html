@@ -245,6 +245,34 @@
 			padding-right: 10px;
 			padding-left: 10px;
 		}
+		h3{
+			margin: 0;
+			padding-bottom: 5px;
+			color: #000;
+			display: block;
+			font-size: 16px;
+			font-family: 'Georgia';
+			font-weight: 400;
+			text-decoration: none;
+			transition: all .3s;
+			@media (max-width: $screen-xs-max){
+				font-size: 15px;
+			}
+		}
+		p{
+			margin: 0;
+			padding-bottom: 5px;
+			color: #000;
+			display: block;
+			font-size: 16px;
+			font-family: 'Georgia';
+			font-weight: 400;
+			text-decoration: none;
+			transition: all .3s;
+			@media (max-width: $screen-xs-max){
+				font-size: 15px;
+			}
+		}
 		a{
 			color: #000;
 			display: block;

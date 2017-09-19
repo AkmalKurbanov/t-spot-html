@@ -9,6 +9,9 @@
 	}
 	&__news-block{
 		margin-top: 50px;
+		display: block;
+		margin-left: 10px;
+		margin-right: 10px;
 		@media (max-width: $screen-xs-max){
 			margin-top: 30px;
 		}
@@ -57,9 +60,9 @@
 			font-weight: 300;
 			padding: 0;
 			margin: 0;
-				@media (max-width: $screen-xs-max){
-					font-size: 14px;
-				}
+			@media (max-width: $screen-xs-max){
+				font-size: 14px;
+			}
 		}
 	}
 }
