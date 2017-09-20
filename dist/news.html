@@ -41,7 +41,7 @@
 <div class="header__nav">   
   <div class="container"> 
    <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-10">
       <ul>
        <li><a href="#">Главная</a></li>
        <li><a href="#">Наши партнеры</a></li>
@@ -51,7 +51,7 @@
        <li><a href="#">Для специалистов</a></li>
      </ul>
    </div>
-   <div class="col-md-2 col-md-offset-1">
+   <div class="col-md-2">
      <div class="header__search">
        <form action="" class="header__form">
          <input type="search" placeholder="Поиск">
@@ -181,25 +181,30 @@
       <div class="col-md-3 col-sm-3">
         <div class="footer__nav">
           <ul>
-           <li><a href="index.html">Главная</a></li>
-           <li><a href="#">Наши партнеры</a></li>
-           <li><a href="news.html">Новости</a></li>
-           <li><a href="memo.html">Памятка</a></li>
-           <li><a href="test.html">Где пройти тест</a></li>
-           <li><a href="specialist.html">Для специалистов</a></li>
-         </ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Наши партнеры</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="memo.html">Памятка</a></li>
+            <li><a href="test.html">Где пройти тест</a></li>
+            <li><a href="specialist.html">Для специалистов</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="footer__form">
+          <p>Подписаться на новости</p>
+          <form action="">
+           <!-- Hidden Required Fields -->
+           <input type="hidden" name="project_name" value="Site Name">
+           <input type="hidden" name="admin_email" value="250296a@gmail.com">
+           <input type="hidden" name="form_subject" value="Form Subject">
+           <!-- END Hidden Required Fields -->
+           <input type="text" placeholder="Введите эл.почту">
+           <button>ok</button>
+         </form>
        </div>
      </div>
      <div class="col-md-3 col-sm-3">
-      <div class="footer__form">
-        <p>Подписаться на новости</p>
-        <form action="">
-          <input type="text" placeholder="Введите эл.почту">
-          <button>ok</button>
-        </form>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-3">
       <div class="footer__address">
         <p><a href="#">Ул.Москворечье 2, стр 1
         115522 Москва, Россия</a>
@@ -211,6 +216,17 @@
 </div>
 </div>
 <!-- footer end -->
+
+
+
+
+<div class="popup size2 mfp-hide" id="submite">
+  <div class="popup__submit">
+    <h2>Спасибо!</h2>
+    <h4>ВЫ подписаны.</h4>
+  </div>
+</div>
+
 
 
 

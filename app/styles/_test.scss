@@ -3,15 +3,15 @@
 	@media (max-width: $screen-md-max){
 		padding-bottom: 50px;
 	}
-		@media (max-width: $screen-xs-max){
-			padding-bottom: 10px;
-		}
+	@media (max-width: $screen-xs-max){
+		padding-bottom: 10px;
+	}
 	&__tabs-map{
 		padding-top: 35px;
 		@media (max-width: $screen-md-max){
 			padding-bottom: 50px;
 		}
-			@media (max-width: $screen-xs-max){
+		@media (max-width: $screen-xs-max){
 			padding-bottom: 20px;
 		}
 	}
@@ -62,9 +62,9 @@
 			font-family: 'GothamPro';
 			font-weight: 400;
 			padding-bottom: 10px;
-				@media (max-width: $screen-md-max){
-					font-size: 19px;
-				}
+			@media (max-width: $screen-md-max){
+				font-size: 19px;
+			}
 		}
 
 		.panel-body {
@@ -88,9 +88,9 @@
 		}
 
 		.panel-heading {
-				@media (max-width: $screen-sm-max){
-					display: inline-block;
-				}
+			@media (max-width: $screen-sm-max){
+				display: inline-block;
+			}
 			a:before {
 				content: '\f107';
 				position: absolute;
@@ -157,6 +157,7 @@
 		text-align: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
+		border-radius: 5px;
 		> li {
 			float: none;
 			margin-bottom: 0;
@@ -222,9 +223,9 @@
 	}
 	&__list{
 		padding-top: 70px;
-			@media (max-width: $screen-md-max){
-				padding-top: 35px;				
-			}
+		@media (max-width: $screen-md-max){
+			padding-top: 35px;				
+		}
 		h2{
 			font-size: 20px;
 			font-family: 'GothamPro';
@@ -281,9 +282,9 @@
 			font-weight: 400;
 			text-decoration: none;
 			transition: all .3s;
-				@media (max-width: $screen-xs-max){
-					font-size: 15px;
-				}
+			@media (max-width: $screen-xs-max){
+				font-size: 15px;
+			}
 			&:hover{
 				color: $main-color;
 			}

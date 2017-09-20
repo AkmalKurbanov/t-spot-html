@@ -6,7 +6,9 @@
     "modernizr": "~2.8.1",
     "jQuery.mmenu": "^6.1.6",
     "owl.carousel": "owl-carousel2#^2.2.1",
-    "font-awesome": "Font-Awesome#^4.7.0"
+    "font-awesome": "Font-Awesome#^4.7.0",
+    "magnific-popup": "^1.1.0",
+    "jquery.maskedinput": "jquery-maskedinputs#^1.4.1"
   },
   "overrides": {
     "bootstrap-sass": {

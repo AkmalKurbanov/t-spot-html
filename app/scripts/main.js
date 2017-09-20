@@ -1,7 +1,46 @@
 $(function() {
 
 
+ $('.js-phone').mask('+7 (999) 999-99-99');
 
+
+  $(".footer__form").submit(function() {
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+      $.magnificPopup.open({
+        items: {
+          src: '#submite',
+          type: 'inline'
+        },
+        midClick: true,
+        closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>'
+      });
+    });
+    return false;
+  });
+
+  $(".questions__form-js").submit(function() {
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+      $.magnificPopup.open({
+        items: {
+          src: '#thank',
+          type: 'inline'
+        },
+        midClick: true,
+        closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>'
+      });
+    });
+    return false;
+  });
 
 
 var owl = $('.main-slider-js');

@@ -66,7 +66,7 @@
 		background-color: $main-color;
 		position: absolute;
 		top: 120px;
-		left: 90px;
+		left: 230px;
 		@media (max-width: $screen-md-max){
 			left: 45px;
 			top: 100px;
@@ -95,8 +95,9 @@
 		}
 	}
 	&__video-place{
-		box-shadow: 5px 15px 15px rgba(0,0,0,0.16);
+		box-shadow: 5px 15px 15px rgba(112,105,105,0.16);
 		min-height: 400px;
+		border-radius: 5px;
 		@media (max-width: $screen-md-max){
 			right: 50%;
 		}
@@ -177,9 +178,10 @@
 	}
 	&__news-block{
 		display: block;
-		max-width: 320px;
+		max-width: 100%;
 		margin: 0 auto;
-		box-shadow: 5px 15px 15px rgba(0,0,0,0.16);
+		min-height: 430px;
+		box-shadow: 5px 15px 15px rgba(112,105,105,0.16);
 		&:focus{
 			text-decoration: none;
 		}

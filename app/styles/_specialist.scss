@@ -13,6 +13,7 @@
 		position: relative;
 	}
 	&__tabls{
+
 		display: inline-block;
 		vertical-align: top;
 		float: right;
@@ -32,9 +33,9 @@
 		text-align: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		box-shadow: 5px 20px 99px rgba(0,0,0,0.16);
+		box-shadow: 5px 20px 99px rgba(149,152,154,0.16);
 		display: inline-block;
-
+		border-radius: 5px;
 		> li {
 			float: none;
 			margin-bottom: 0;
@@ -67,12 +68,13 @@
 	&__desc{
 		width: 100%;
 		display: inline-block;
-		box-shadow: 5px 20px 99px rgba(0,0,0,0.16);
+		box-shadow: 5px 20px 99px rgba(149,152,154,0.16);
 		padding-left: 70px;
 		padding-right: 70px;
 		padding-top: 70px;
 		padding-bottom: 70px;
 		margin-bottom: 40px;
+		border-radius: 5px;
 		@media (max-width: $screen-md-max){
 			padding: 30px;
 			margin-bottom: 30px;
