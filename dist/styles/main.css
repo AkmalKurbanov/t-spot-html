@@ -10768,6 +10768,11 @@ button.close {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .size2 {
   padding: 15px;
   max-width: 545px;
@@ -11314,6 +11319,9 @@ button.close {
 }
 
 .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   background-color: #2A2A2A;
   display: -moz-flex;
   display: -ms-flex;
@@ -11964,7 +11972,7 @@ button.close {
 }
 
 .questions .panel-collapse {
-  border-bottom: 1px solid #C3C6C8;
+  border-bottom: 1px solid transparent;
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
@@ -12109,6 +12117,7 @@ button.close {
 
 .questions__acardeon .panel-body {
   background: #fff;
+  border-top: 1px solid transparent !important;
 }
 
 @media (max-width: 767px) {
@@ -12884,14 +12893,26 @@ button.close {
 .contacts__map {
   z-index: 1;
   width: 100%;
-  position: relative;
   min-height: 350px;
+  width: 550px;
   text-align: left;
+  position: relative;
+  position: absolute;
+  top: -160px;
 }
 
 .contacts__map img {
   width: 100%;
   max-width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .contacts__map {
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -13115,6 +13136,7 @@ button.close {
 
 .test {
   padding-bottom: 100px;
+  height: 300vh;
 }
 
 @media (max-width: 1199px) {
@@ -13586,6 +13608,7 @@ button.close {
 
 .specialist__desc--desc {
   max-width: 770px;
+  min-height: 400px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -13696,4 +13719,22 @@ button.close {
   text-decoration: none;
   color: #fff;
   background-color: #9398CC;
+}
+
+.partners {
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

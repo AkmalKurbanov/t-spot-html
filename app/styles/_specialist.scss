@@ -85,6 +85,7 @@
 		}
 		&--desc{
 			max-width: 770px;	
+			min-height: 400px;
 			@media screen and (max-width: 1200px){
 				width: 100%;
 				max-width: 100%;

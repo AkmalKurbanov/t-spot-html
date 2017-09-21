@@ -12,190 +12,199 @@
 		flex-direction: row;
 		align-items: center;
 		margin-bottom: 50px;	
-			@media (max-width: $screen-md-max){
-				display: block;
-				padding-top: 2px;
-				padding-left: 0;
-			}
-		@media (max-width: $screen-xs-max){
-			display: block;
-			background-size: cover;
-			padding-left: 0;
-			margin-bottom: 0;
-		}
-		&:after{
-			position: absolute;
-			content: '';
-			background-image: url('../images/grad.png');
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background-repeat: no-repeat;
-			background-size: cover;			
-		}
-	}
+   @media (max-width: $screen-md-max){
+    display: block;
+    padding-top: 2px;
+    padding-left: 0;
+  }
+  @media (max-width: $screen-xs-max){
+   display: block;
+   background-size: cover;
+   padding-left: 0;
+   margin-bottom: 0;
+ }
+ &:after{
+   position: absolute;
+   content: '';
+   background-image: url('../images/grad.png');
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-repeat: no-repeat;
+   background-size: cover;			
+ }
+}
 
-	&__map {
-		z-index: 1;
-		width: 100%;
-		position: relative;
-		min-height: 350px;
-		text-align: left;
-    img{
-      width: 100%;
-      max-width: 100%;
-    }
-		@media (max-width: $screen-xs-max){
-			padding-top: 20px;  
-			width: 100%;
-		}
-		
-  }
-  &__desc{
-  	position: relative;
-  	z-index: 1;
-  	padding-right: 90px;
-  	@media (max-width: $screen-md-max){
-  		display: block;
-  		padding-right: 0;
-  		text-align: center;
-  	}
-  	@media (max-width: $screen-xs-max){
-  		padding-right: 0;
-  		text-align: center;
-  	}
-  	.first-link{
-      display: block;
-      color: #000;
-  		margin: 0;
-  		font-size: 28px;
-  		font-family: 'GothamPro';
-  		font-weight: 400;
-  		position: relative;
-  		margin-bottom: 80px;
-      transition: all .3s;
-      &:hover{
-        text-decoration: none;
-        color: #503623;
-      }
-  		@media (max-width: $screen-md-max){
-  			margin-top: 30px;
-  			margin-bottom: 30px;
-  		}
-  		@media (max-width: $screen-xs-max){
-  			margin-bottom: 30px;
-  			margin-top: 20px;
-  			font-size: 25px;
-  		}
-  		&:after{
-  			position: absolute;
-  			content: '';
-  			right: 0;
-  			bottom: -10px;
-  			left: 0;
-  			max-width: 60px;
-  			background-color: #000;
-  			height: 2px;
-  			@media (max-width: $screen-md-max){
-  				left: 50%;
-  				transform: translateX(-50%);
-  			}
-  			@media (max-width: $screen-xs-max){
-  				left: 50%;
-  				transform: translateX(-50%);
-  			}
-  		}
-  	}
-  	p{
-  		font-size: 25px;
-  		font-family: 'GothamPro';
-  		font-weight: 300;
-  		margin: 0;
-  		line-height: 28px;
-  		@media (max-width: $screen-md-max){
-  			font-size: 22px;
-  		}
-  		@media (max-width: $screen-xs-max){
-  			font-size: 20px;
-  		}
-  	}
-  	.link{
-  		font-size: 12px;
-  		font-family: 'GothamPro';
-  		font-weight: 400;
-  		display: block;
-  		color: #343637;
-  		padding-top: 22px;
-  		text-align: right;
-  		@media (max-width: $screen-md-max){
-  			float: none;
-  			padding-bottom: 30px;
-  			padding-right: 20px;
-  		}
-  		@media (max-width: $screen-xs-max){
-  			padding-bottom: 20px;
-  		}
-  	}
-  }
-  &__question{
-  	box-shadow: 5px 15px 15px rgba(112,105,105,0.16);
-  	max-width: 1050px;
+&__map {
+  z-index: 1;
+  width: 100%;
+  min-height: 350px;
+  width: 550px;
+  text-align: left;
+  position: relative;
+  position: absolute;
+  top: -160px;
+  img{
     width: 100%;
+    max-width: 100%;
+  }
+  @media screen and (max-width: 1200px){
+    position: relative;
+    top: 10px;
     margin: 0 auto;
-    background-color: #fff;
-    min-height: 236px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 30px;
-    border-radius: 5px;
-    @media (max-width: $screen-xs-max){
-    	padding-left: 15px;
-    	padding-right: 15px;
-    	padding-bottom: 30px;
-    }
-    h2{
-    	font-size: 21px;
-    	font-family: 'GothamPro';
-    	font-weight: 400;
-    	color: #000;
-    	@media (max-width: $screen-xs-max){
-    		font-size: 20px;
-    	}
-    }
-    p{
-    	font-size: 16px;
-    	font-family: 'GothamPro';
-    	font-weight: 300;
-    	color: #858585;
-    }
-    a{
-    	font-size: 16px;
-    	 font-family: 'SegoeUI';
-    	 font-weight: 400;
-    	 color: #6967F4;
-    	 text-align: center;
-    	 display: block;
-    	 margin-top: 75px;
-    	 @media (max-width: $screen-xs-max){
-    	 	margin-top: 20px;
-    	 }
-    	 &:focus{
-    	 	text-decoration: none;
-    	 }
-    	 &:hover{
-    	 	color: #858585;
-    	 	text-decoration: none;
-    	 }
-    }
+    max-width: 100%;
   }
-  &__botttom-wrap{
-  	background-color: #F8F8F8;
-  	padding-bottom: 55px;
-  	@media (max-width: $screen-xs-max){
-  		padding-bottom: 30px;
-  	}
+  @media (max-width: $screen-xs-max){
+   padding-top: 20px;  
+   width: 100%;
+ }
+
+}
+&__desc{
+ position: relative;
+ z-index: 1;
+ padding-right: 90px;
+ @media (max-width: $screen-md-max){
+  display: block;
+  padding-right: 0;
+  text-align: center;
+}
+@media (max-width: $screen-xs-max){
+  padding-right: 0;
+  text-align: center;
+}
+.first-link{
+  display: block;
+  color: #000;
+  margin: 0;
+  font-size: 28px;
+  font-family: 'GothamPro';
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 80px;
+  transition: all .3s;
+  &:hover{
+    text-decoration: none;
+    color: #503623;
   }
+  @media (max-width: $screen-md-max){
+   margin-top: 30px;
+   margin-bottom: 30px;
+ }
+ @media (max-width: $screen-xs-max){
+   margin-bottom: 30px;
+   margin-top: 20px;
+   font-size: 25px;
+ }
+ &:after{
+   position: absolute;
+   content: '';
+   right: 0;
+   bottom: -10px;
+   left: 0;
+   max-width: 60px;
+   background-color: #000;
+   height: 2px;
+   @media (max-width: $screen-md-max){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: $screen-xs-max){
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+}
+p{
+  font-size: 25px;
+  font-family: 'GothamPro';
+  font-weight: 300;
+  margin: 0;
+  line-height: 28px;
+  @media (max-width: $screen-md-max){
+   font-size: 22px;
+ }
+ @media (max-width: $screen-xs-max){
+   font-size: 20px;
+ }
+}
+.link{
+  font-size: 12px;
+  font-family: 'GothamPro';
+  font-weight: 400;
+  display: block;
+  color: #343637;
+  padding-top: 22px;
+  text-align: right;
+  @media (max-width: $screen-md-max){
+   float: none;
+   padding-bottom: 30px;
+   padding-right: 20px;
+ }
+ @media (max-width: $screen-xs-max){
+   padding-bottom: 20px;
+ }
+}
+}
+&__question{
+ box-shadow: 5px 15px 15px rgba(112,105,105,0.16);
+ max-width: 1050px;
+ width: 100%;
+ margin: 0 auto;
+ background-color: #fff;
+ min-height: 236px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ padding-left: 30px;
+ border-radius: 5px;
+ @media (max-width: $screen-xs-max){
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 30px;
+ }
+ h2{
+   font-size: 21px;
+   font-family: 'GothamPro';
+   font-weight: 400;
+   color: #000;
+   @media (max-width: $screen-xs-max){
+    font-size: 20px;
+  }
+}
+p{
+ font-size: 16px;
+ font-family: 'GothamPro';
+ font-weight: 300;
+ color: #858585;
+}
+a{
+ font-size: 16px;
+ font-family: 'SegoeUI';
+ font-weight: 400;
+ color: #6967F4;
+ text-align: center;
+ display: block;
+ margin-top: 75px;
+ @media (max-width: $screen-xs-max){
+   margin-top: 20px;
+ }
+ &:focus{
+   text-decoration: none;
+ }
+ &:hover{
+   color: #858585;
+   text-decoration: none;
+ }
+}
+}
+&__botttom-wrap{
+ background-color: #F8F8F8;
+ padding-bottom: 55px;
+ @media (max-width: $screen-xs-max){
+  padding-bottom: 30px;
+}
+}
 }
