@@ -1,6 +1,6 @@
 .test{
 	padding-bottom: 100px;
-	height: 300vh;
+	min-height: 100vh;
 	@media (max-width: $screen-md-max){
 		padding-bottom: 50px;
 	}

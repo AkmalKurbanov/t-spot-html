@@ -12858,7 +12858,7 @@ button.close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 1199px) {
@@ -13136,7 +13136,7 @@ button.close {
 
 .test {
   padding-bottom: 100px;
-  height: 300vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 1199px) {
