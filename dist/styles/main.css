@@ -11690,12 +11690,19 @@ button.close {
 
 .memo__desc--analysis {
   padding-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .memo__desc--analysis p {
   font-size: 20px;
   font-family: 'GothamPro';
   font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .memo__desc--analysis p {
+    font-size: 16px;
+  }
 }
 
 .memo__desc--last-block {
@@ -12603,7 +12610,7 @@ button.close {
 }
 
 .carousel__video-place {
-  box-shadow: 5px 15px 15px rgba(112, 105, 105, 0.16);
+  box-shadow: 0px 11px 59px rgba(0, 0, 0, 0.09);
   min-height: 400px;
   border-radius: 5px;
 }
@@ -12727,6 +12734,13 @@ button.close {
   box-shadow: 5px 15px 15px rgba(112, 105, 105, 0.16);
 }
 
+@media (max-width: 767px) {
+  .carousel__news-block {
+    margin-bottom: 30px;
+    min-height: 400px;
+  }
+}
+
 .carousel__news-block:focus {
   text-decoration: none;
 }
@@ -12774,8 +12788,8 @@ button.close {
 @media (max-width: 767px) {
   .carousel__img-bottom {
     min-height: 200px;
-    margin-bottom: 25px;
     margin-bottom: 0;
+    padding-bottom: 20px;
   }
 }
 
@@ -12899,6 +12913,7 @@ button.close {
   position: relative;
   position: absolute;
   top: -160px;
+  box-shadow: 0px 11px 59px rgba(0, 0, 0, 0.09);
 }
 
 .contacts__map img {
@@ -13510,79 +13525,8 @@ button.close {
   min-height: 100vh;
 }
 
-.specialist .container {
-  position: relative;
-}
-
-.specialist .tab-content {
-  display: inline-block;
-  position: relative;
-}
-
-.specialist__tab-wrap {
-  position: relative;
-}
-
-.specialist__tabls {
-  display: inline-block;
-  vertical-align: top;
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 15px;
-}
-
-@media screen and (max-width: 1200px) {
-  .specialist__tabls {
-    position: relative;
-    right: 0;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
-.specialist .nav-tabs {
-  width: 100%;
-  border-bottom: 1px solid transparent;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-shadow: 5px 20px 99px rgba(149, 152, 154, 0.16);
-  display: inline-block;
-  border-radius: 5px;
-}
-
-.specialist .nav-tabs > li {
-  float: none;
-  margin-bottom: 0;
-}
-
-.specialist .nav-tabs > li > a {
-  margin-right: 0;
-  line-height: normal;
-  border: 1px solid transparent;
-  border-radius: 0;
-  color: #505050;
-  font-size: 15px;
-  font-family: 'GothamPro';
-  font-weight: 400;
-}
-
-.specialist .nav-tabs > li > a:hover {
-  border-color: transparent;
-}
-
-.specialist .nav-tabs > li.active > a, .specialist .nav-tabs > li.active > a:hover, .specialist .nav-tabs > li.active > a:focus {
-  color: #505050;
-  background-color: #E4E5F1;
-  border: 1px solid transparent;
-  border-bottom-color: transparent;
-  cursor: default;
-}
-
 .specialist__desc {
   width: 100%;
-  display: inline-block;
   box-shadow: 5px 20px 99px rgba(149, 152, 154, 0.16);
   padding-left: 70px;
   padding-right: 70px;
@@ -13606,19 +13550,19 @@ button.close {
   }
 }
 
-.specialist__desc--desc {
+.specialist--desc {
   max-width: 770px;
   min-height: 400px;
 }
 
 @media screen and (max-width: 1200px) {
-  .specialist__desc--desc {
+  .specialist--desc {
     width: 100%;
     max-width: 100%;
   }
 }
 
-.specialist__desc h2 {
+.specialist h2 {
   font-size: 20px;
   font-family: 'GothamPro';
   font-weight: 500;
@@ -13628,18 +13572,18 @@ button.close {
 }
 
 @media (max-width: 1199px) {
-  .specialist__desc h2 {
+  .specialist h2 {
     padding-bottom: 0;
   }
 }
 
 @media (max-width: 767px) {
-  .specialist__desc h2 {
+  .specialist h2 {
     font-size: 17px;
   }
 }
 
-.specialist__desc p {
+.specialist p {
   padding-top: 35px;
   font-size: 18px;
   font-family: 'Georgia';
@@ -13651,16 +13595,57 @@ button.close {
 }
 
 @media (max-width: 1199px) {
-  .specialist__desc p {
+  .specialist p {
     padding-top: 20px;
     font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
-  .specialist__desc p {
+  .specialist p {
     font-size: 15px;
   }
+}
+
+.specialist__list {
+  padding: 20px 0;
+  width: 100%;
+  box-shadow: 5px 20px 99px rgba(149, 152, 154, 0.16);
+}
+
+.specialist__list .panel-default {
+  border: none;
+}
+
+.specialist__list .navbar-nav {
+  text-align: center;
+  float: none;
+}
+
+.specialist__list .navbar-nav li {
+  float: none;
+}
+
+.specialist__list .navbar-nav > li > a {
+  color: #4B4B4B;
+  font-size: 15px;
+  font-family: 'GothamPro';
+  font-weight: 100;
+}
+
+.specialist__list .navbar-nav > li > a:hover, .specialist__list .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #9398CC;
+}
+
+.specialist__list .navbar-nav > .active > a, .specialist__list .navbar-nav > .active > a:hover, .specialist__list .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #9398CC;
+}
+
+.specialist__list .navbar-nav > .disabled > a, .specialist__list .navbar-nav > .disabled > a:hover, .specialist__list .navbar-nav > .disabled > a:focus {
+  color: #fff;
+  background-color: transparent !important;
 }
 
 .new {
